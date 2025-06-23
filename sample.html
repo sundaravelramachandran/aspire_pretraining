@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body id="title">
+ <h1 >
+    This is a sample HTML document.
+ </h1>
+ <input type="text" id="colorname" placeholder="Type color name here...">
+ <button onclick="changeColor()" >Change Color</button>
+ <script>
+    function changeColor() {
+        let colorname = document.getElementById("colorname").value;
+        document.getElementById("title").style.backgroundColor = colorname;
+        
+    }
+
+ </script>
+ <button onclick="getElementById('date').innerHTML= new Date()">Date</button>
+ <p id="date"></p>
+</body>
+</html>

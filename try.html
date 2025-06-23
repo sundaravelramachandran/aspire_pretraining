@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<label for="count">No of Students :</label><br>
+<input type="number" id="count" name="count"  placeholder="Enter number of students" required>
+<button onclick="count()">submit</button>
+<p id="youngest"></p>
+
+<script>
+    function count(){
+        let count=document.getElementById("count").value    ;
+        let students=[];
+        let ages=[];
+        for(let i=0;i<count;i++){
+            let name=prompt("Enter the name of student "+(i+1));
+            let age=prompt("Enter the age of student "+(i+1));
+            students.push([name,age]);
+            
+            ages.push(parseInt(age));
+
+
+
+        }
+        let  minAge=Math.min(...ages);
+        let ind=ages.indexOf(minAge);
+        let young =students[ind];
+        console.log(young);
+        let result="<h2>Youngest Student is " + young[0] +" and the age is : "+ young[1] +"<br>"+new Date()+ "</h2>";
+        document.getElementById("youngest").innerHTML=result;
+    }
+</script>
+<!-- <canvas id="myCanvas" width="400" height="400"> hellow</canvas> -->
+</body>
+</html>
