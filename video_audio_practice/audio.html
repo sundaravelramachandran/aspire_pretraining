@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+<div>
+   
+    <div class="audio-container">
+         <h1 >Audio Player</h1>
+        <audio src="audio.mp3" controls></audio>
+        <audio src="audio.mp3" controls></audio>
+        <audio src="audio.mp3" controls></audio>
+    </div>
+</div>
+<style>
+    .audio-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; 
+        gap: 30px; 
+        flex-direction: column;/* Allows audio players to wrap to the next line if needed */
+    }
+</style>
+</body>
+</html>
